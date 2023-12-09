@@ -10,7 +10,7 @@ function App() {
             <div class="nav">
                 <div class="innerNav">
                     <div class="content">
-                        <h1 class="h1">udasfadasfaasdffasdfas</h1>
+                        <h1 class="h1">Test Content</h1>
                     </div>
                 </div>
             </div>
