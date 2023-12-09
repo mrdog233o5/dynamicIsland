@@ -57,13 +57,9 @@ window.onload = function() {
         position: relative;
         display: inline-block;
         padding: 0px 10px;
-    }
-
-    .nav .content h1 {
         color: white;
         white-space: nowrap;
     }
-
     `;
     document.head.appendChild(styleElement);
 
