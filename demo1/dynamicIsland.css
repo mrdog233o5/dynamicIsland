@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100vw;
+    height: 15px;
+    display: flex;
+    padding-top: 13px;
+    justify-content: center;
+    position: fixed;
+}
+
+nav * {
+    transition: all 0.3s ease-in-out;
+}
+
+.nav {
+    background: black;
+    overflow: hidden;
+    border-radius: 100q;
+    min-width: 200px;
+    height: 37px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav:hover {
+    scale: 1.05;
+}
+
+.nav .innerNav {
+    border-radius: 100q;
+    overflow: hidden;
+}
+
+.nav .content {
+    position: relative;
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav .content h1 {
+    color: white;
+    white-space: nowrap;
+}
