@@ -1,6 +1,17 @@
-# DESCRIPTION
+# Description
 
 this is a very simple dynamic island for web development
+
+# How to use
+
+1. Download the dynamicIsland.js
+
+2. Add this tag below into your html code:
+```
+<script src="dynamicIsland.js"></script>
+```
+
+3. the first <nav> tag will be the Dynamic Island, everything you put in it will appear in the Dynamic Island.
 
 # React + Vite
 
