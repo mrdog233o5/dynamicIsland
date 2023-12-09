@@ -25,10 +25,11 @@ nav * {
     min-width: 170px;
     min-height: 50px;
     padding: var(--padding);
+    transition: transform 0s none;
 }
 
 .nav:hover {
-    scale: 1.05;
+    scale: 1.03;
 }
 
 .nav .innerNav {

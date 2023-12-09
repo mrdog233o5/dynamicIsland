@@ -13,18 +13,6 @@ function resetStyle() {
     nav.style.height = "0px";
 }
 
-function tiltEffect() {
-	if (isMouseOver) {
-		console.log(centerX, centerY);
-		console.log(mouseX, mouseY);
-        const deltaScale = 15
-        var transformPhrase = `translate(${ ( mouseX - centerX ) / deltaScale }px, ${ ( mouseY - centerY ) / deltaScale }px)`;
-        console.log(transformPhrase);
-        nav.style.transform = transformPhrase; 
-		requestAnimationFrame(tiltEffect);
-	}
-}
-
 function sizeControl() {
 	computedContent = getComputedStyle(content);
 	contentLen = content.clientWidth;
@@ -33,19 +21,28 @@ function sizeControl() {
 }
 window.requestAnimationFrame(sizeControl);
 
+// tile effect
+
+function tiltEffect() {
+	if (isMouseOver) {
+        const deltaScale = 18.0;
+        var transformPhrase = `translate(${ ( mouseX - centerX ) / deltaScale }px, ${ ( mouseY - centerY ) / deltaScale }px)`;
+        nav.style.transform = transformPhrase; 
+		requestAnimationFrame(tiltEffect);
+	}
+}
+
 nav.addEventListener("mouseenter", () => {
 	isMouseOver = true;
-    nav.style.height = "150px";
 	var rect = nav.getBoundingClientRect();
-	centerX = Math.round(rect.left + rect.width / 2);
-    centerY = Math.round(rect.top + rect.height / 2);
+	centerX = rect.left + rect.width / 2;
+    centerY = rect.top + rect.height / 2;
 	requestAnimationFrame(tiltEffect);
 });
 
 nav.addEventListener("mouseleave", () => {
 	isMouseOver = false;
-    nav.style.height = "0px";
-    nav.style.transform = ""; 
+    resetStyle();
 });
 
 document.addEventListener("mousemove", function(event) {
