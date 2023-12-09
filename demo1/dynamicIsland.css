@@ -4,28 +4,27 @@
 }
 
 nav {
+    --roundness: 26px;
+    --padding: 10px;
     width: 100vw;
     height: 15px;
     display: flex;
-    padding-top: 13px;
+    padding-top: 2vh;
     justify-content: center;
     position: fixed;
 }
 
 nav * {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease;
 }
 
 .nav {
     background: black;
     overflow: hidden;
-    border-radius: 100q;
-    min-width: 200px;
-    height: 37px;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: calc( var(--roundness) + var(--padding) );
+    min-width: 170px;
+    min-height: 50px;
+    padding: var(--padding);
 }
 
 .nav:hover {
@@ -33,7 +32,12 @@ nav * {
 }
 
 .nav .innerNav {
-    border-radius: 100q;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--roundness);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
