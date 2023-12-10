@@ -56,7 +56,7 @@ window.onload = function() {
     .nav .content {
         position: relative;
         display: inline-block;
-        padding: 0px 10px;
+        padding: 3px;
         color: white;
         white-space: nowrap;
     }
@@ -68,8 +68,6 @@ window.onload = function() {
 
     var nav = document.getElementsByClassName("nav")[0];
     var content = nav.getElementsByClassName("content")[0];
-    var computedContent;
-    var contentLen;
     var isMouseOver = false;
     var centerX;
     var centerY;
@@ -82,9 +80,10 @@ window.onload = function() {
     }
 
     function sizeControl() {
-        computedContent = getComputedStyle(content);
-        contentLen = content.clientWidth;
-        nav.style.width = `${contentLen}px`;
+        var contentWidth = content.clientWidth;
+        var contentHeight = content.clientHeight;
+        nav.style.width = `${contentWidth}px`;
+        nav.style.height = `${contentHeight}px`;
         window.requestAnimationFrame(sizeControl);
     }
     window.requestAnimationFrame(sizeControl);

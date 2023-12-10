@@ -1,0 +1,68 @@
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+
+span {
+    display: flex;
+}
+
+.br {
+    height: 200px;
+}
+
+.test {
+    display: none;
+}
+
+.faceid {
+    filter: invert(90%);
+    scale: 0.75;
+}
+
+.test2 {
+    width: 160px;
+    height: 160px;
+}
+
+.test2 .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test3 .line {
+    border-right: 5px solid white;
+}
+
+.test3 h1 {
+    padding: 0 20px;
+}
+
+.nav:hover .test3 h1 {
+    padding: 0 30px;
+}
+
+.test4 img {
+    height: 43px;
+    border-radius: 100q;
+    animation: 5s infinite linear spin;
+}
+
+.test4 div {
+    margin-left: 10px;
+}
+
+.nav:hover .test4 img {
+    border-radius: 26px;
+    animation: none;
+    width: 100px;
+    height: 100px;
+}
