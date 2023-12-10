@@ -10,7 +10,6 @@ nav {
     --roundness: 26px;
     --padding: 10px;
     width: 100vw;
-    height: 15px;
     display: flex;
     padding-top: 2vh;
     justify-content: center;
